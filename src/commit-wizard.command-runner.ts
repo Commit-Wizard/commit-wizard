@@ -31,6 +31,10 @@ export class CWCommandRunner extends CommandRunner {
       return;
     }
 
+    if(commandName === CommandName.SetKey){
+      this.apiKey = options.key
+    }
+
     try {
       const command = CommandFactory.createCommand(commandName, this.apiKey);
       command.execute();
