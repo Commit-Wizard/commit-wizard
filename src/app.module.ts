@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { SetKeyCommand, GetKeyCommand } from './app.service';
+import { CWCommandRunner } from './commit-wizard.command-runner';
 
 @Module({
   imports: [],
   controllers: [],
-  providers: [SetKeyCommand, GetKeyCommand],
+  providers: [CWCommandRunner],
 })
 export class AppModule {}
