@@ -1,6 +1,6 @@
 # Commit-Wizard
 
-CW CLI is a command-line interface for generating commit messages by GPT.
+Commit-Wizard is a command-line interface for generating commit messages by GPT.
 
 ## Installation
 
