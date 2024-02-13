@@ -3,6 +3,13 @@ import { ICommand } from './command.factory';
 import { execSync } from 'child_process';
 import { GPTClient } from '@/clients/gpt.client';
 
+const excludeDiffFiles: string[] = [
+  'package-lock.json',
+  'yarn.lock',
+  'dist/*',
+  'lib/*',
+].map((file) => `':(exclude)${file}'`);
+
 export class GenerateCommitMsgCommand implements ICommand {
   constructor(private gptClient: GPTClient) {}
 
@@ -26,7 +33,11 @@ export class GenerateCommitMsgCommand implements ICommand {
       ],
     });
 
-    const diff = execSync("git diff --staged -- ':!yarn.lock'").toString();
+    const diff = execSync(
+      `git diff --staged -- . ${excludeDiffFiles.join(' ')}`,
+    )
+      .toString()
+      .trim();
 
     if (!diff) {
       throw new Error(
