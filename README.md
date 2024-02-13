@@ -1,10 +1,9 @@
 # Commit Wizard
 
-Commit Wizard은 외부 서비스의 API 키를 설정하고 관리하며, 커밋 메시지를 자동으로 생성하는 도구입니다.
-
 ## Description / 설명
 
-Commit Wizard provides functionalities to set and manage the API key for an external service, and automatically generate commit messages.
+Commit Wizard provides functionalities to set and manage the API key for an external service, 
+and automatically generate commit messages.
 
 Commit Wizard은 외부 서비스의 API 키를 설정하고 관리하며, 커밋 메시지를 자동으로 생성하는 기능을 제공합니다.
 
@@ -25,8 +24,10 @@ npm install commit-wizard
 Set the API key for the external service.
 
 ```bash
-cw -k YOUR_API_KEY
+cw -k YOUR_GPT_API_KEY
 ```
+If you don't have an GPT API key, you can find it [here](https://platform.openai.com/account/api-keys).
+
 
 ### Show Key / API 키 표시
 
