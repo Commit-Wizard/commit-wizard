@@ -16,6 +16,10 @@ npm install commit-wizard
 
 ## Usage / 사용법
 
+- `-k, --key [key]`: 외부 서비스의 API 키를 설정합니다.
+- `-s, --show-key`: 현재 설정된 API 키를 표시합니다.
+- `-g, --generate-commit-msg`: 커밋 메시지를 자동으로 생성합니다.
+
 ### Set Key / API 키 설정
 
 Set the API key for the external service.
@@ -39,12 +43,6 @@ Generate a commit message automatically.
 ```bash
 cw -g
 ```
-
-## Options / 옵션
-
-- `-k, --key [key]`: 외부 서비스의 API 키를 설정합니다.
-- `-s, --show-key`: 현재 설정된 API 키를 표시합니다.
-- `-g, --generate-commit-msg`: 커밋 메시지를 자동으로 생성합니다.
 
 ## Advanced Usage / 고급 사용법
 - `-b` 또는 `--branch`: 두 브랜치 간의 변경사항 비교
