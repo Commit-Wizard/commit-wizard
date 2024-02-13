@@ -5,7 +5,7 @@ import { SetApiKeyCommand } from './set-api-key.command';
 import { ShowApiKeyCommand } from './show-api-key.command';
 
 export interface ICommand {
-  execute(apiKey?: string): void;
+  execute(options?: { apiKey?: string; diffOptions?: string[] }): void;
 }
 
 export class CommandFactory {
