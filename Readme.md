@@ -1,6 +1,6 @@
 # Commit-Wizard
 
-CW CLI is a command-line interface for generating commit messages by GPT.
+Commit-Wizard is a command-line interface for generating commit messages by GPT.
 
 ## Installation
 
@@ -27,6 +27,7 @@ cw [options]
 ```bash
 cw -k your-GPT-api-key
 ```
+
 If you don't have a GPT API key, you can obtain one from the OpenAI website: [OpenAI API](https://openai.com/product).
 
 ### Show Current API Key
@@ -51,7 +52,7 @@ cw -g
 
 ## MIT License
 
-Copyright (c) 2024 gimseonjin616
+Copyright (c) 2024 gimseonjin616 and Misong
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
