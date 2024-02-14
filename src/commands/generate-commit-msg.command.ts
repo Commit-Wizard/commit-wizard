@@ -2,8 +2,6 @@ import { prompt } from 'enquirer';
 import { ICommand } from './command.factory';
 import { execSync } from 'child_process';
 import { GPTClient } from '@/clients/gpt.client';
-import { generateGitDiffCommand } from '@/clients/git.client';
-
 
 
 const excludeDiffFiles: string[] = [
@@ -36,7 +34,7 @@ export class GenerateCommitMsgCommand implements ICommand {
       ],
     });
 
-    const diffCommand = generateGitDiffCommand(options.diffOptions);
+    const diffCommand = GitClient.generateGitDiffCommand(options.diffOptions);
 
     const diff = execSync(`${diffCommand} ${excludeDiffFiles.join(' ')}`)
       .toString()
