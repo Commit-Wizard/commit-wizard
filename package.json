@@ -1,9 +1,8 @@
 {
-  "name": "cli-test",
+  "name": "@cw-commit-wizard/commit-wizard",
   "version": "0.0.1",
   "description": "",
   "author": "",
-  "private": true,
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
@@ -19,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "release": "GITHUB_TOKEN=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 shipjs prepare"
+    "release": "shipjs prepare"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -79,5 +78,9 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": "./src/index.js"
 }
