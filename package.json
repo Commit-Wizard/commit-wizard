@@ -82,5 +82,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "bin": "./dist/main.js"
+  "bin": "./main.js"
 }
