@@ -10,6 +10,7 @@ export class SetApiKeyCommand implements ICommand {
 
   private async writeEnvFile(key: string): Promise<void> {
     const envPath = path.join(process.cwd(), '.env');
+    
     let content = '';
 
     if (fs.existsSync(envPath)) {
