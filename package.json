@@ -82,5 +82,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "bin": "./main.js"
+  "bin": {
+    "commit-wizard": "./dist/main.js"
+  }
 }
