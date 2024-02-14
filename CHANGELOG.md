@@ -1,3 +1,17 @@
+# [0.2.0](https://github.com/Commit-Wizard/commit-wizard/compare/v0.1.1...v0.2.0) (2024-02-14)
+
+
+### Bug Fixes
+
+* Fix Github_Token Name ([1f89542](https://github.com/Commit-Wizard/commit-wizard/commit/1f89542691b4866ede0deb373a9e0e565d1ea649))
+
+
+### Features
+
+* Add hashbang comment ([0ce77c6](https://github.com/Commit-Wizard/commit-wizard/commit/0ce77c6568a97e6b1fb3ec1bde5bd9a513ca6e3e))
+
+
+
 ## [0.1.1](https://github.com/Commit-Wizard/commit-wizard/compare/v0.1.0...v0.1.1) (2024-02-14)
 
 
