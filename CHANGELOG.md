@@ -1,3 +1,17 @@
+# [0.3.0](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.4...v0.3.0) (2024-02-14)
+
+
+### Bug Fixes
+
+* Delete git client ([4a5855c](https://github.com/Commit-Wizard/commit-wizard/commit/4a5855c24fab18a56bdb3541cc761a4ad6a13d06))
+
+
+### Features
+
+* Add github actor info ([a7c916c](https://github.com/Commit-Wizard/commit-wizard/commit/a7c916c5f285f68cc212d1b17a8de114c3ea9aa6))
+
+
+
 ## [0.2.5](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.4...v0.2.5) (2024-02-14)
 
 
