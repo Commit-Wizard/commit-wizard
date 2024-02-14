@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.1...v0.2.2) (2024-02-14)
+
+
+### Bug Fixes
+
+* Update Shipjs Trigger ([4dc3c8f](https://github.com/Commit-Wizard/commit-wizard/commit/4dc3c8f333328ba5103645c5c9a4aa75878cdc9e))
+
+
+
 ## [0.2.1](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.0...v0.2.1) (2024-02-14)
 
 

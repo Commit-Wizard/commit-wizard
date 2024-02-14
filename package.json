@@ -1,6 +1,6 @@
 {
   "name": "@cw-commit-wizard/commit-wizard",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "author": "",
   "license": "UNLICENSED",
@@ -82,5 +82,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "bin": "./dist/main.js" 
+  "bin": "./dist/main.js"
 }
