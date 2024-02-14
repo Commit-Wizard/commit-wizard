@@ -31,8 +31,8 @@ export class CWCommandRunner extends CommandRunner {
       return;
     }
 
-    if(commandName === CommandName.SetKey){
-      this.apiKey = options.key
+    if (commandName === CommandName.SetKey) {
+      this.apiKey = options.key;
     }
 
     try {
