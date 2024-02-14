@@ -1,3 +1,12 @@
+## [0.2.5](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.4...v0.2.5) (2024-02-14)
+
+
+### Bug Fixes
+
+* Fix Settings ([fe68e80](https://github.com/Commit-Wizard/commit-wizard/commit/fe68e80537dbbf75891b18959e8125df1149522d))
+
+
+
 ## [0.2.4](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.3...v0.2.4) (2024-02-14)
 
 
