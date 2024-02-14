@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.2...v0.2.3) (2024-02-14)
+
+
+### Bug Fixes
+
+* Update Bin Path ([af75e71](https://github.com/Commit-Wizard/commit-wizard/commit/af75e71bbfa3a75ec582df69eb1380b1a8c60a60))
+
+
+
 ## [0.2.2](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.1...v0.2.2) (2024-02-14)
 
 
