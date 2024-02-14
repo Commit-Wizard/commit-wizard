@@ -19,7 +19,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "release": "GITHUB_TOKEN=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 shipjs prepare"
+    "release": "GITHUB_TOKEN=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 shipjs prepare"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
