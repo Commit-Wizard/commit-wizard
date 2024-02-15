@@ -1,17 +1,19 @@
+import { Injectable } from '@nestjs/common';
 import { OpenAI } from 'openai';
 
+@Injectable()
 export class GPTClient {
-  private openai: OpenAI;
-
-  constructor(private apiKey: string) {
-    this.openai = new OpenAI({ apiKey: this.apiKey });
-  }
+  constructor(private apiKey: string) {}
 
   async generateCommitMessage(
     commitType: string,
     diff: string,
   ): Promise<string> {
-    const completion = await this.openai.chat.completions.create({
+    if (!this.apiKey) throw new Error('Please register the API key first.');
+
+    const openai = new OpenAI({ apiKey: this.apiKey });
+
+    const completion = await openai.chat.completions.create({
       messages: [
         {
           role: 'system',
