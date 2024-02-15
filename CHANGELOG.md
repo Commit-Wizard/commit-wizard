@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/Commit-Wizard/commit-wizard/compare/v0.3.0...v0.4.0) (2024-02-15)
+
+
+### Features
+
+*  implementing a command-line interface for generating commit messages based on different comparison options such as branch, commit, and file changes ([f8d1a76](https://github.com/Commit-Wizard/commit-wizard/commit/f8d1a762b8e889ad1548a6e3b5f0bbc022c2c9b6))
+
+
+
 # [0.3.0](https://github.com/Commit-Wizard/commit-wizard/compare/v0.2.4...v0.3.0) (2024-02-14)
 
 
