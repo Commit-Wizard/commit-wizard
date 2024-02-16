@@ -17,31 +17,20 @@ yarn global add @cw-commit-wizard/commit-wizard
 
 ## Usage / 사용법
 
-- `-k, --key [key]`: Set the API key for an external service.
-- `-s, --show-key`: Display the currently configured API key.
-- `-g, --generate-commit-msg`: Automatically generate the commit message.
-
 ### Set Key / API 키 설정
 
 Set the API key for the external service.
 
 ```bash
-cw -k YOUR_GPT_API_KEY
+export EXTERNAL_SERVICE_API_KEY=[YOUR_GPT_API_KEY]
 ```
 If you don't have an GPT API key, you can find it [here](https://platform.openai.com/account/api-keys).
 
 
-### Show Key / API 키 표시
-
-Show the current API key.
-
-```bash
-cw -s
-```
-
 ### Generate Commit Message / 커밋 메시지 생성
 
 Generate a commit message automatically.
+- `-g, --generate-commit-msg`: Automatically generate the commit message.
 
 ```bash
 cw -g
