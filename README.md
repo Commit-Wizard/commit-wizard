@@ -2,22 +2,24 @@
 
 ## Description / 설명
 
-Commit Wizard provides functionalities to set and manage the API key for an external service, 
+Commit Wizard provides functionalities to set and manage the GPT API key for an external service, 
 and automatically generate commit messages.
-
-Commit Wizard은 외부 서비스의 API 키를 설정하고 관리하며, 커밋 메시지를 자동으로 생성하는 기능을 제공합니다.
 
 ## Installation / 설치
 
 ```bash
-npm install commit-wizard
+npm install -g @cw-commit-wizard/commit-wizard
+```
+
+```bash
+yarn global add @cw-commit-wizard/commit-wizard
 ```
 
 ## Usage / 사용법
 
-- `-k, --key [key]`: 외부 서비스의 API 키를 설정합니다.
-- `-s, --show-key`: 현재 설정된 API 키를 표시합니다.
-- `-g, --generate-commit-msg`: 커밋 메시지를 자동으로 생성합니다.
+- `-k, --key [key]`: Set the API key for an external service.
+- `-s, --show-key`: Display the currently configured API key.
+- `-g, --generate-commit-msg`: Automatically generate the commit message.
 
 ### Set Key / API 키 설정
 
@@ -46,29 +48,29 @@ cw -g
 ```
 
 ## Advanced Usage / 고급 사용법
-- `-b` 또는 `--branch`: 두 브랜치 간의 변경사항 비교
-- `-c` 또는 `--commit`: 두 커밋 간의 변경사항 비교
-- `-f` 또는 `--file`: 특정 파일의 변경사항 비교
 
-아래는 변경사항을 비교하는 옵션을 사용하는 방법입니다:
+- `-b` or `--branch`: Compare changes between two branches.
+- `-c` or `--commit`: Compare changes between two commits.
+- `-f` or `--file`: Compare changes for a specific file.
 
-1. **두 브랜치 간의 변경사항 비교 (-b 또는 --branch):**
+
+1. **Compare changes between two branches (-b or --branch):**
    ```bash
    cw -b branch1 branch2
    ```
-   이 명령은 `branch1`과 `branch2` 간의 변경사항을 비교합니다.
+   This command compares the changes between `branch1` and `branch2`.
 
-2. **두 커밋 간의 변경사항 비교 (-c 또는 --commit):**
+2. **Compare changes between two commits (-c or --commit):**
    ```bash
    cw -c commit1 commit2
    ```
-   이 명령은 `commit1`과 `commit2` 간의 변경사항을 비교합니다.
+   This command compares the changes between `commit1` and `commit2`.
 
-3. **특정 파일의 변경사항 비교 (-f 또는 --file):**
+3. **Compare changes for a specific file (-f or --file):**
    ```bash
    cw -f file1 file2
    ```
-   이 명령은 `file1`과 `file2`의 변경사항을 비교합니다.
+   This command compares the changes for `file1` and `file2`.
 
 
 ## License / 라이선스
