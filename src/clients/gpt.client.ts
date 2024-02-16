@@ -17,11 +17,11 @@ export class GPTClient {
       messages: [
         {
           role: 'system',
-          content: `You are a software developer. Summarize this diff in a commit message`,
+          content: `As a software developer, summarize this diff in a commit message starting with the prefix derived from ${commitType.split(':')[0]}.`,
         },
         {
           role: 'user',
-          content: `commit type: ${commitType}, diff in a commit message: ${diff}`,
+          content: `diff : ${diff}`,
         },
       ],
       temperature: 0,
