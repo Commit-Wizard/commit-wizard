@@ -1,12 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { execSync } from 'child_process';
-
-type Stage = { type: 'stage' };
-type Branch = { type: 'branch'; branch1: string; branch2: string };
-type Commit = { type: 'commit'; commit1: string; commit2: string };
-type File = { type: 'file'; files: string[] };
-
-export type DiffOptions = Stage | Branch | Commit | File;
+import { DiffOptions } from './diff-options.generator';
 
 @Injectable()
 export class GitClient {
