@@ -1,4 +1,4 @@
-import { CWCommandOptions } from "@/command-runner";
+import { CWCommandOptions } from '@/command-runner';
 
 type Stage = { type: 'stage' };
 type Branch = { type: 'branch'; branch1: string; branch2: string };
@@ -9,43 +9,52 @@ export type DiffOptions = Stage | Branch | Commit | File;
 
 export class DiffOptionsGenerator {
   static generate(options: CWCommandOptions, inputs: string[]): DiffOptions {
-    switch (true) {
-      case options.branch:
-        return this.handleBranchComparison(inputs);
-
-      case options.commit:
-        return this.handleCommitComparison(inputs);
-
-      case options.file:
+    const handlers = {
+      branch: () => {
+        if (inputs.length !== 2)
+          throw new Error(
+            'Branch comparison requires exactly two branch names.',
+          );
+        return this.handleBranchComparison(inputs[0], inputs[1]);
+      },
+      commit: () => {
+        if (inputs.length !== 2)
+          throw new Error(
+            'Commit comparison requires exactly two commit identifiers.',
+          );
+        return this.handleCommitComparison(inputs[0], inputs[1]);
+      },
+      file: () => {
+        if (inputs.length === 0)
+          throw new Error('File comparison requires at least one file path.');
         return this.handleFileComparison(inputs);
-
-      case options.generate:
+      },
+      generate: () => {
         return this.handleStageComparison();
+      },
+    };
 
-      default:
-        throw new Error('Invalid command options. Please specify a valid comparison type.');
+    for (const option in options) {
+      if (options[option] && handlers[option]) {
+        return handlers[option]();
+      }
     }
+
+    throw new Error(
+      'Invalid command options. Please specify a valid comparison type.',
+    );
   }
 
-  static handleBranchComparison(inputs: string[]): DiffOptions {
-    if (inputs.length !== 2) {
-      throw new Error('Branch comparison requires exactly two branch names.');
-    }
-    return { type: 'branch', branch1: inputs[0], branch2: inputs[1] };
+  static handleBranchComparison(branch1: string, branch2: string): DiffOptions {
+    return { type: 'branch', branch1, branch2 };
   }
 
-  static handleCommitComparison(inputs: string[]): DiffOptions {
-    if (inputs.length !== 2) {
-      throw new Error('Commit comparison requires exactly two commit identifiers.');
-    }
-    return { type: 'commit', commit1: inputs[0], commit2: inputs[1] };
+  static handleCommitComparison(commit1: string, commit2: string): DiffOptions {
+    return { type: 'commit', commit1, commit2 };
   }
 
-  static handleFileComparison(inputs: string[]): DiffOptions {
-    if (inputs.length === 0) {
-      throw new Error('File comparison requires at least one file path.');
-    }
-    return { type: 'file', files: inputs };
+  static handleFileComparison(files: string[]): DiffOptions {
+    return { type: 'file', files };
   }
 
   static handleStageComparison(): DiffOptions {
