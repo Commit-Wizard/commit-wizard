@@ -1,3 +1,7 @@
+## [0.4.5](https://github.com/Commit-Wizard/commit-wizard/compare/v0.4.4...v0.4.5) (2024-03-10)
+
+
+
 ## [0.4.4](https://github.com/Commit-Wizard/commit-wizard/compare/v0.4.3...v0.4.4) (2024-02-19)
 
 
